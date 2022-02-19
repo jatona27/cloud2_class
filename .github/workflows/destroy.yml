@@ -48,7 +48,7 @@ jobs:
 
     # Destroy the resources
     - name: Terraform Destroy
-      run: terraform destroy -auto-approve
+      run: terraform destroy.yml -auto-approve
       env:
         GOOGLE_CREDENTIALS: ${{ secrets.GCP_SA_KEY }}
         TF_VAR_project_id: ${{ env.PROJECT_ID }}
